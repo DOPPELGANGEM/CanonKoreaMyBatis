@@ -31,6 +31,7 @@ public class MemLogoutController extends HttpServlet {
 		if(session != null) {
 			session.invalidate(); // 세션파괴
 			response.sendRedirect("/index.jsp");
+			
 		}
 	}
 
