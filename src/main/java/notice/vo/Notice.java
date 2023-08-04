@@ -1,4 +1,4 @@
-package notice.model.vo;
+package notice.vo;
 
 public class Notice {
 

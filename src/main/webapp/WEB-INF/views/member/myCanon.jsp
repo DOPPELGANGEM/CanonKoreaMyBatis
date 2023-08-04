@@ -15,12 +15,12 @@
             <h1 class="lnb_txt">마이캐논</h1>
             <ul class="lnb_link_area">
               <li class="lnb_link_item"><a href="/member/logout.do">로그아웃</a></li>
-              <li class="lnb_link_item"><a href="/member/update.do?member-id=${canonMemId}">마이페이지</a></li>
+              <li class="lnb_link_item"><a href="/member/update.do?member-id=${memberId}">마이페이지</a></li>
               <li class="lnb_link_item"><a href="/notice/insert.do">공지사항</a></li>
             </ul>
           </aside>
           <div class="my_canon_content">
-            <h1 class="title"><a href="#">${ canonMemName }</a>님 안녕하세요!</h1>
+            <h1 class="title"><a href="#">${memberName}</a>님 안녕하세요!</h1>
             <div class="user_info">
               <div class="user_level_wrap">
                 <ul class="user_level_item_wrap">
