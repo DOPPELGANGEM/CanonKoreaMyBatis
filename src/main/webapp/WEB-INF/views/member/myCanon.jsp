@@ -12,6 +12,7 @@
       <div class="container">
         <div class="mycanon_wrap">
           <aside class="my_canon_lnb">
+<!--           	<div class="img_area"><img src="/resources/images/mypage/vue_logo.png" alt=VUELogo></div> -->
             <h1 class="lnb_txt">마이캐논</h1>
             <ul class="lnb_link_area">
               <li class="lnb_link_item"><a href="/member/logout.do">로그아웃</a></li>

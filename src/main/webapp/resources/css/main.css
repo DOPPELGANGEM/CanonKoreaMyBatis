@@ -10,11 +10,11 @@ body { font-family: 'Noto Sans KR','Roboto', sans-serif;}
 /* 메인페이지(로그인화면) */
 #main_login .container{ width:480px; margin:0 auto; }
 #main_login .main_title_txt { font-size:28px; margin-bottom:25px; text-align: center; }
-#main_login .box_wrap { padding: 15px 40px; border-radius: 4px; background-color: #f9f9f9; text-align: center;     margin-bottom: 20px; }
+#main_login .box_wrap { padding: 15px 40px; border-radius: 4px; background-color: #f9f9f9; text-align: center; margin-bottom: 20px; }
 #main_login .bold_txt { font-size:16px; }
 #main_login .regular_txt { font-size:14px; margin: 5px 0; }
 #main_login .integrated_btn { font-size:16px; color:#dc000c; }
-#main_login .input_field_area input { display: block; width:100%; height:50px; background:#f3f3f3; border:1px solid #e6e6e6; padding:0 0 0 10px; font-size:15px; box-sizing: border-box; margin-bottom:10px; }
+#main_login .input_field_area input { display: block; width:100%; height:50px; background:#fff; border:1px solid #e6e6e6; padding:0 0 0 10px; font-size:14px; box-sizing: border-box; margin-bottom:10px; }
 #main_login .remember_acc_wrap { display: flex; justify-content: space-between; align-items: center; }
 #main_login .check_field_wrap { display: flex; }
 #main_login .check_item input { display:none; }
@@ -36,13 +36,14 @@ body { font-family: 'Noto Sans KR','Roboto', sans-serif;}
 /* 로그인하면나오는 마이캐논페이지 */
 #my_canon_main .container { width:1000px; margin:0 auto; }
 #my_canon_main .mycanon_wrap { display:flex; }
-#my_canon_main .my_canon_lnb .lnb_txt { font-size:24px; }
+#my_canon_main .my_canon_lnb .lnb_txt { font-size:24px; position:relative; }
+#my_canon_main .my_canon_lnb .lnb_txt:before { content:''; width:140px; height:60px; position:absolute; top: 10px; left: -160px; background: url(/resources/images/00_common/vue_logo.png) no-repeat center / cover; }
 #my_canon_main .my_canon_lnb .lnb_link_area { width:180px; margin:40px 20px 0 0; }
 #my_canon_main .my_canon_lnb .lnb_link_item a { font-size:18px; margin:0 0 20px; display:inline-block; position: relative;  }
 #my_canon_main .my_canon_lnb .lnb_link_item a:before { content:'click!'; display: block; font-size:12px; color:#dc000c; position:absolute; top: -8px; left: -34px; font-weight: 700; z-index: -1; }
-#my_canon_main .my_canon_lnb .lnb_link_item a:after { content:''; display: block; position: absolute; bottom:-2px; left:0; background:#dc000c; width:0; height: 2px;  }
+#my_canon_main .my_canon_lnb .lnb_link_item a:after { content:''; display: block; position: absolute; bottom:-3px; left:50%; background:#dc000c; width:0; height: 2px;  }
 #my_canon_main .my_canon_lnb .lnb_link_item a:hover {  color:#dc000c; transition: all 0.3s; }
-#my_canon_main .my_canon_lnb .lnb_link_item a:hover:after { width:100%; transition: all 0.3s; }
+#my_canon_main .my_canon_lnb .lnb_link_item a:hover:after { left:0; width:100%; transition: all 0.4s; }
 #my_canon_main .title { font-size:24px; margin-bottom:30px; }
 #my_canon_main .title a { border-bottom:2px solid #000; }
 #my_canon_main .user_level_wrap { margin-bottom:60px; }

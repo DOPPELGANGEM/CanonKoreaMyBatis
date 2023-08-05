@@ -8,9 +8,8 @@
     </h1> 
     <div class="header_util_wrap">
       <ul class="header_util_item_wrap">
-<%--         <li class="header_util_item">${ canonMemName }님 환영합니다!</li> --%>
         <li class="header_util_item"><a href="/member/logout.do">로그아웃</a></li>
-        <li class="header_util_item"><a href="/member/update.do?member-id=${canonMemId}">마이페이지</a></li>
+        <li class="header_util_item"><a href="/member/update.do?member-id=${memberId}">마이페이지</a></li>
         <li class="header_util_item"><a href="/notice/insert.do">공지사항</a></li>
       </ul>
     </div>
