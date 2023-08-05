@@ -115,7 +115,7 @@ body { font-family: 'Noto Sans KR','Roboto', sans-serif;}
 #main_insert .form_field input {  width: 930px;height: 42px;display: block;padding: 0 10px;
 font-size: 16px; border: 1px solid #e6e6e6; box-sizing: border-box; border-radius: 4px; } 
 #main_insert .form_field input:focus { border:2px solid #000; }
-#main_insert .txt_contents { resize: none; width:930px; height: 240px; border: solid 1px #e6e6e6; box-sizing: border-box; font-size: 16px; padding:10px; border-radius: 4px; }
+#main_insert .noticeContents { resize: none; width:930px; height: 240px; border: solid 1px #e6e6e6; box-sizing: border-box; font-size: 16px; padding:10px; border-radius: 4px; }
 #main_insert .button_wrap { text-align: center; }
 #main_insert .btn_submit { width:180px; height:60px; background:#dc000c; font-size: 18px; border:none; border-radius:30px; color:#fff; font-weight: 700; cursor: pointer; }
 
@@ -131,9 +131,6 @@ font-size: 16px; border: 1px solid #e6e6e6; box-sizing: border-box; border-radiu
 #main_noticelist .table_wrap .thead_area tr th:nth-child(3) { width:300px; } 
 #main_noticelist .table_wrap .tbody_area tr { border-bottom:1px solid #e6e6e6; height:68px; }
 #main_noticelist .table_wrap .tbody_area td { text-align: center; }
-
-
-
 #main_noticelist .paging_wrap { display:flex; justify-content: center; align-items: center; margin:40px 0; }
 #main_noticelist .paging_wrap a { margin: 0 6px; text-align: center; }
 #main_noticelist .paging_wrap a p { width:30px; height:30px; border: solid 1px #ccc;
@@ -143,12 +140,6 @@ border-radius: 100%; position: relative; }
 #main_noticelist .paging_wrap a:first-child p:before { transform:rotate(180deg); left:6px; }
 #main_noticelist .paging_wrap a:last-child p:before { left:8px; }
 #main_noticelist .paging_wrap a span { display:none; }
-
-
-
-
-
-
 
 /* 공지사항 상세 */
 #main_detail .banner_wrap { position: relative; background:url("/resources/images/notice/notice_img.png") no-repeat; height: 340px; }
@@ -175,7 +166,7 @@ border-radius: 100%; position: relative; }
 #main_noticeModify .form_field input {  width: 930px;height: 42px;display: block;padding: 0 10px;
 font-size: 16px; border: 1px solid #e6e6e6; box-sizing: border-box; border-radius: 4px; } 
 #main_noticeModify .form_field input:focus { border:2px solid #000; }
-#main_noticeModify .txt_contents { resize: none; width:930px; height: 240px; border: solid 1px #e6e6e6; box-sizing: border-box; font-size: 16px; padding:10px; border-radius: 4px; }
+#main_noticeModify .noticeContents { resize: none; width:930px; height: 240px; border: solid 1px #e6e6e6; box-sizing: border-box; font-size: 16px; padding:10px; border-radius: 4px; }
 #main_noticeModify .button_wrap { text-align: center; }
 #main_noticeModify .btn_submit { width:180px; height:60px; background:#dc000c; font-size: 18px; border:none; border-radius:30px; color:#fff; font-weight: 700; cursor: pointer; }
 

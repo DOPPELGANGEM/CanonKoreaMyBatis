@@ -3,25 +3,30 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
  <mapper namespace="NoticeMapper">
- 	<resultMap type="com.kh.notice.model.vo.Notice" id="noticeResultMap">
- 		<id 	property="noticeNo" 	 	column="NOTICE_NO" />
- 		<result property="" 	column="" />
- 		<result property="" 	column="" />
- 		<result property="" 	column="" />
+ 	<resultMap type="notice.model.vo.Notice" id="noticeResultMap">
+ 		<id 	property="noticeNo" 	    column="NOTICE_NO" />
+ 		<result property="noticeTitle" 		column="NOTICE_TITLE" />
+ 		<result property="noticeContents" 	column="NOTICE_CONTENTS" />
+ 		<result property="regDate" 			column="NOTICE_REGDATE" />
  	</resultMap>
  	<insert id="insertNotice"> 
+ 		INSERT INTO CANON_NOTICE_TBL VALUES(SEQ_CANON_NOTICENO.NEXTVAL, #{noticeTitle },#{noticeContents },DEFAULT)
  	</insert>
  	
  	<update id="updateNotice"> 
+ 		
  	</update>
  	
- 	<select id="deleteNotice" >
+ 	<select id="deleteNotice">
+ 	
  	</select>
  	
  	<select id="selectNoticeList" resultMap="noticeResultMap">
+ 		SELECT * FROM CANON_NOTICE_TBL ORDER BY NOTICE_NO DESC
  	</select>
  	
  	<select id="selectOneByNo" resultMap="noticeResultMap">
+ 		SELECT * FROM CANON_NOTICE_TBL WHERE NOTICE_NO = #{noticeNo }
  	</select>
  	
  </mapper> 

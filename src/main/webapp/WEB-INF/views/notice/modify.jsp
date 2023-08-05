@@ -15,20 +15,18 @@
       <div class="container">
       	<h2 class="tit_txt">공지사항 수정</h2>
         <form action="/notice/modify.do" method="post">
-      	<input type="hidden" name="canonNoticeNo" value="${notice.canonNoticeNumber}"> 
+      	<input type="hidden" name="NoticeNo" value="${notice.noticeNo}"> 
          <ul class="form_wrap">
            <li class="form_item">
-             <label class="form_label" for="canonTitle">제목</label>
+             <label class="form_label" for="noticeTitle">제목</label>
              <div class="form_field">
-<%--                 <input type="text" id="canonTitle" name="canonTitle" value="${notice.canonNoticeTitle}"> --%>
-                <input type="text" id="canonTitle" name="canonTitle" value="">
+                <input type="text" id="noticeTitle" name="noticeTitle" value="">
              </div>
            </li>
            <li class="form_item">
-             <label class="form_label" for="canonContents">내용</label>
+             <label class="form_label" for="noticeContents">내용</label>
              <div class="form_field">
-<%--               <textarea id="canonContents" class="txt_contents" name="canonContents" maxlength="50" value="${notice.canonContents}"></textarea> --%>
-              <textarea id="canonContents" class="txt_contents" name="canonContents" maxlength="50" value="${notice.canonContents}"></textarea>
+              <textarea class="noticeContents" id="noticeContents" name="noticeContents" value="${notice.noticeContents}"></textarea>
              </div>
            </li>
          </ul>

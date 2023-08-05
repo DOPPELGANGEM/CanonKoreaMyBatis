@@ -23,11 +23,11 @@
 		            </tr>
 	      		</thead>
           		<tbody class="tbody_area">
-		            <c:forEach var="notice" items="${requestScope.canonList}"> 
+		            <c:forEach var="notice" items="${requestScope.nList}"> 
 			          <tr>
-			            <td>${notice.canonNoticeNumber}</td>
-			            <td><a href="/notice/detail.do?noticeNo=${notice.canonNoticeNumber}">${notice.canonNoticeTitle}</a></td>
-			            <td>${notice.canonRegDate}</td>
+			            <td>${notice.noticeNo}</td>
+			            <td><a href="/notice/detail.do?noticeNo=${notice.noticeNo}">${notice.noticeTitle}</a></td>
+			            <td>${notice.regDate}</td>
 			          </tr>    
 				     </c:forEach>    
           		</tbody>
