@@ -1,9 +1,6 @@
 package notice.controller;
 
 import java.io.IOException;
-import java.util.List;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,16 +11,16 @@ import notice.model.service.NoticeService;
 import notice.model.vo.Notice;
 
 /**
- * Servlet implementation class NotListController
+ * Servlet implementation class NotDetailController
  */
-@WebServlet("/notice/list.do")
-public class NotListController extends HttpServlet {
+@WebServlet("/notice/detail.do")
+public class NotDetailController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public NotListController() {
+    public NotDetailController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,25 +29,19 @@ public class NotListController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// notice/list.do는 get방식으로동작
-		// SELECT * FROM CANON_NOTICE_TBL ORDER BY NOTICE_NO DESC (최신순 내림차순으로 가져오기)
+		int noticeNo = Integer.parseInt(request.getParameter("noticeNo"));
 		NoticeService service = new NoticeService();
-		String page = request.getParameter("currentPage") != null ? request.getParameter("currentPage") : "1"; // page 1로세팅 삼항연산자
-		int currentPage = Integer.parseInt(page);
-		// nList는 없어도 널이 아니라서 isEmpt()로 비어있는지 체크
-		// 비슷한 방법으로 nList.size() > 0 가 있음
-		List<Notice> nList = service.selectNoticeList(currentPage);
-		if(!nList.isEmpty()) {
-			// 성공하면 list.jsp
-			request.setAttribute("nList", nList);
-			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/notice/list.jsp"); //list.do test...
-			view.forward(request, response); 
+		Notice notice = service.selectOneByNo(noticeNo);
+		
+		if(notice != null) {
+			// 성공시 detail.jsp
+			request.setAttribute("notice", notice);
+			request.getRequestDispatcher("/WEB-INF/views/notice/detail.jsp").forward(request, response);
 		} else {
-			request.setAttribute("msg", "리스트 조회가 되지 않습니다.");
-			request.setAttribute("url", "/index.jsp");
+			request.setAttribute("msg", "데이터가 존재하지 않습니다.");
+			request.setAttribute("url", "/notice/list.do");
 			request.getRequestDispatcher("/WEB-INF/views/common/serviceFailed.jsp").forward(request, response);
 		}
-		
 		
 	}
 
@@ -63,3 +54,17 @@ public class NotListController extends HttpServlet {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

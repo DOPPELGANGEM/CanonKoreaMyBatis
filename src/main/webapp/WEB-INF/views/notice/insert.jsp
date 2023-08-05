@@ -14,23 +14,23 @@
       <div class="container">
       	<h2 class="tit_txt">공지사항 입력</h2>
         <form action="/notice/insert.do" method="post">
-         <ul class="form_wrap">
-           <li class="form_item">
-             <label class="form_label" for="noticeTitle">제목</label>
-             <div class="form_field">
-                <input type="text" id="noticeTitle" name="noticeTitle">
-             </div>
-           </li>
-           <li class="form_item">
-             <label class="form_label" for="noticeContents">내용</label>
-             <div class="form_field">
-              <textarea class="noticeContents" id="noticeContents" name="noticeContents"></textarea>
-             </div>
-           </li>
-         </ul>
-        <div class="button_wrap">
-          <input type="submit" class="btn_submit" value="입력하기">
-        </div>
+	         <ul class="form_wrap">
+	           <li class="form_item">
+	             <label class="form_label" for="noticeTitle">제목</label>
+	             <div class="form_field">
+	                <input type="text" id="noticeTitle" name="noticeTitle">
+	             </div>
+	           </li>
+	           <li class="form_item">
+	             <label class="form_label" for="noticeContents">내용</label>
+	             <div class="form_field">
+	              <textarea id="noticeContents" name="noticeContents" class="noticeContents"></textarea>
+	             </div>
+	           </li>
+	         </ul>
+	        <div class="button_wrap">
+	          <input type="submit" class="btn_submit" value="입력하기">
+	        </div>
         </form>
       </div>
     </main>

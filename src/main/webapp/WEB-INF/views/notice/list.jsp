@@ -23,7 +23,7 @@
 		            </tr>
 	      		</thead>
           		<tbody class="tbody_area">
-		            <c:forEach var="notice" items="${requestScope.nList}"> 
+		            <c:forEach items="${requestScope.nList}" var="notice"> <!-- ListController에서 가져온 request scope에서꺼내옴 -->
 			          <tr>
 			            <td>${notice.noticeNo}</td>
 			            <td><a href="/notice/detail.do?noticeNo=${notice.noticeNo}">${notice.noticeTitle}</a></td>
@@ -34,6 +34,8 @@
 			</table>
 			<ul class="paging_wrap">
 				${pageNavi}
+<!-- 				 <a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a> -->
+<!--          		 <a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a><a href="#">10</a> -->
 	      	</ul>
       	</div>
      </main>

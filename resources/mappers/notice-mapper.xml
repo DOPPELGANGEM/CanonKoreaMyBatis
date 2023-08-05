@@ -10,15 +10,15 @@
  		<result property="regDate" 			column="NOTICE_REGDATE" />
  	</resultMap>
  	<insert id="insertNotice"> 
- 		INSERT INTO CANON_NOTICE_TBL VALUES(SEQ_CANON_NOTICENO.NEXTVAL, #{noticeTitle },#{noticeContents },DEFAULT)
+ 		INSERT INTO CANON_NOTICE_TBL VALUES(SEQ_CANON_NOTICENO.NEXTVAL, #{ noticeTitle },#{ noticeContents },DEFAULT)
  	</insert>
  	
  	<update id="updateNotice"> 
- 		
+ 		UPDATE CANON_NOTICE_TBL SET NOTICE_TITLE = #{ noticeTitle }, NOTICE_CONTENTS = #{ noticeContents } WHERE NOTICE_NO = #{ noticeNo }
  	</update>
  	
  	<select id="deleteNotice">
- 	
+ 		DELETE CANON_NOTICE_TBL WHERE NOTICE_NO = #{ noticeNo }
  	</select>
  	
  	<select id="selectNoticeList" resultMap="noticeResultMap">

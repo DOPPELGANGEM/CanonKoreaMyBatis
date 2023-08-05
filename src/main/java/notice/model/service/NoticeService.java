@@ -32,11 +32,40 @@ public class NoticeService {
 		// 연결해제
 		session.close();
 		return result;
+		
 	}
 	
-	public List<Notice> selectNoticeList(int noticeNo) {
+	public int updateNotice(Notice notice) {
+		
+		SqlSession session = SqlSessionTemplate.getSqlSession(); 
+		int result = nDao.updateNotice(session, notice);
+		if(result > 0) {
+			session.commit();
+		} else {
+			session.rollback();
+		}
+		session.close();
+		return result;
+		
+	}
+
+	public int deleteNotice(int noticeNo) {
+		
 		SqlSession session = SqlSessionTemplate.getSqlSession();
-		List<Notice> nList = nDao.selectNoticeList(session, noticeNo);
+		int result = nDao.deleteNotice(session, noticeNo);
+		if(result > 0) {
+			session.commit();
+		} else {
+			session.rollback();
+		}
+		session.close();
+		return result;
+		
+	}
+
+	public List<Notice> selectNoticeList(int currentPage) {
+		SqlSession session = SqlSessionTemplate.getSqlSession();
+		List<Notice> nList = nDao.selectNoticeList(session, currentPage);
 		session.close();
 		return nList;
 	}

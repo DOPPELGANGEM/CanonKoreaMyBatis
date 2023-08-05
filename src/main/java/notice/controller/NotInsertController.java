@@ -56,8 +56,8 @@ public class NotInsertController extends HttpServlet {
 		} else {
 			// 실패하면 에러메시지
 			request.setAttribute("msg", "공지사항입력 실패했습니다.");
-//			request.setAttribute("url", "/notice/list.do");
-			request.getParameter("/WEB-INF/views/common/serviceFailed.jsp");
+			RequestDispatcher view =  request.getRequestDispatcher("/WEB-INF/views/common/serviceFailed.jsp");
+			view.forward(request, response);
 		}
 		
 	}

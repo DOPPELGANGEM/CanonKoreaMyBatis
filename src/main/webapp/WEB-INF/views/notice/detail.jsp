@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
   <jsp:include page="/WEB-INF/views/common/head.jsp"></jsp:include>
@@ -21,7 +21,7 @@
              <span>등록일 : ${notice.regDate}</span>
            </div>
            <div class="det_cotent">
-             <p>${notice.canonContents}</p>
+             <p>${notice.noticeContents}</p>
            </div>
         	<div class="button_wrap">
 	        	<a class="btn btn_1" href="/notice/list.do">목록</a>
@@ -35,9 +35,9 @@
     <jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
     <script>
 	    const deleteCheck = () => {
-	    	const CanonNoticeNo = '${notice.canonNoticeNumber}';
+	    	const NoticeNo = '${notice.noticeNo}';
 	    	if(confirm("정말로 삭제하시겠습니까?")) {
-	    		location.href = "/notice/delete.do?canonNoticeNumber="+CanonNoticeNo;
+	    		location.href = "/notice/delete.do?noticeNo="+NoticeNo;
 	    	}
 	    }	
     </script>  
