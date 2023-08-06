@@ -37,11 +37,10 @@ public class NotListController extends HttpServlet {
 		NoticeService service = new NoticeService();
 		String page = request.getParameter("currentPage") != null ? request.getParameter("currentPage") : "1"; // page 1로세팅 삼항연산자
 		int currentPage = Integer.parseInt(page);
-		// nList는 없어도 널이 아니라서 isEmpt()로 비어있는지 체크
-		// 비슷한 방법으로 nList.size() > 0 가 있음
 		List<Notice> nList = service.selectNoticeList(currentPage);
 		if(!nList.isEmpty()) {
 			// 성공하면 list.jsp
+			request.setAttribute("page", page);
 			request.setAttribute("nList", nList);
 			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/notice/list.jsp"); //list.do test...
 			view.forward(request, response); 
