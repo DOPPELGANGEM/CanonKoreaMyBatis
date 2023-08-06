@@ -83,9 +83,9 @@ body { font-family: 'Noto Sans KR','Roboto', sans-serif;}
 #main_register .info_line label { width:150px; font-size: 18px;font-weight: 600; }
 #main_register .info_line input { width:400px; height: 42px; border-radius:4px; padding:0 10px; font-size:18px; border:1px solid #e6e6e6; }
 #main_register .info_line input:focus { border:2px solid #000; }
-#main_register .info_line:nth-child(5) label{ width:150px; }
-#main_register .info_line:nth-child(5) .check_radio { display:flex; width:400px; padding: 0 12px; }
-#main_register .info_line:nth-child(5) input { width:40px; height:20px; }
+#main_register .info_gender label{ width:150px; }
+#main_register .info_gender .check_radio { display:flex; width:400px; padding: 0 12px; }
+#main_register .info_gender input { width:40px; height:20px; }
 #main_register .btn_wrap { display: flex;  justify-content: center;  margin: 20px 0 0; }
 #main_register .btn_wrap input { width: 180px; height: 60px; line-height: 60px; border-radius: 30px; font-size: 18px; text-align: center; border: none; cursor:pointer; }
 #main_register .btn_wrap .btn_submit { background: #dc000c; color: #fff; margin-right: 10px;  }
@@ -97,9 +97,9 @@ body { font-family: 'Noto Sans KR','Roboto', sans-serif;}
 #main_mypage .info_line label { width:150px; font-size: 18px;font-weight: 600; }
 #main_mypage .info_line input { width:400px; height: 42px; border-radius:4px; padding:0 10px; font-size:18px; border:1px solid #e6e6e6; }
 #main_mypage .info_line input:focus { border:2px solid #000; }
-#main_mypage .info_line:nth-child(5) label{ width:150px; }
-#main_mypage .info_line:nth-child(5) .check_radio { display:flex; width:400px; padding: 0 12px; }
-#main_mypage .info_line:nth-child(5) input { width:40px; height:20px; }
+#main_mypage .info_gender label{ width:150px; }
+#main_mypage .info_gender .check_radio { display:flex; width:400px; padding: 0 12px; }
+#main_mypage .info_gender input { width:40px; height:20px; }
 #main_mypage .btn_wrap { display: flex;  justify-content: center;  margin: 20px 0 0; }
 #main_mypage .btn_wrap .btn_update { width: 180px; height: 60px; line-height: 60px; border-radius: 30px; font-size: 18px; text-align: center; border: none; cursor:pointer; background: #dc000c; color: #fff; margin-right: 10px; }
 #main_mypage .btn_wrap .btn_delete { width: 180px; height: 60px; line-height: 60px; border-radius: 30px; font-size: 18px; text-align: center; border: none; cursor:pointer; background: #000; color: #fff; }

@@ -29,7 +29,7 @@
               <label for="member-age">나이</label>
               <input type="text" id="member-age" name="member-age">
             </li>
-            <li class="info_line">
+            <li class="info_line info_gender">
               <label for="member-gender">성별</label>
               <div class="check_radio">
                 남<input type="radio" id="member-gender" name="member-gender" value="M">
