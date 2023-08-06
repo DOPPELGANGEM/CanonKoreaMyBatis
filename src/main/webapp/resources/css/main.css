@@ -37,7 +37,7 @@ body { font-family: 'Noto Sans KR','Roboto', sans-serif;}
 #my_canon_main .container { width:1000px; margin:0 auto; }
 #my_canon_main .mycanon_wrap { display:flex; }
 #my_canon_main .my_canon_lnb .lnb_txt { font-size:24px; position:relative; }
-#my_canon_main .my_canon_lnb .lnb_txt:before { content:''; width:140px; height:60px; position:absolute; top: 10px; left: -160px; background: url(/resources/images/00_common/vue_logo.png) no-repeat center / cover; }
+/* #my_canon_main .my_canon_lnb .lnb_txt:before { content:''; width:140px; height:60px; position:absolute; top: 10px; left: -160px; background: url(/resources/images/00_common/vue_logo.png) no-repeat center / cover; } */
 #my_canon_main .my_canon_lnb .lnb_link_area { width:180px; margin:40px 20px 0 0; }
 #my_canon_main .my_canon_lnb .lnb_link_item a { font-size:18px; margin:0 0 20px; display:inline-block; position: relative;  }
 #my_canon_main .my_canon_lnb .lnb_link_item a:before { content:'click!'; display: block; font-size:12px; color:#dc000c; position:absolute; top: -8px; left: -34px; font-weight: 700; z-index: -1; }

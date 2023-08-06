@@ -52,5 +52,11 @@
     </main>
     <!-- 푸터 -->
     <jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>
+    <script>
+    	<!-- 특정헤더요소제거임시..-->
+    	const selectTag = document.querySelector(".header_util_wrap");
+    	console.log(selectTag);
+    	selectTag.remove();
+    </script>
   </body>
 </html>

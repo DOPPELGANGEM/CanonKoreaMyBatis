@@ -1,17 +1,5 @@
 'use strict';
 
-/* 05.통합회원가입(개인)  */
-function doOpenCheck(chk) {
-  let obj = document.getElementsByName('rember_check');
-  for(let i = 0; i < obj.length; i++) {
-    if(obj[i] !== chk) {
-      obj[i].checked = false;
-    } else {
-      obj[i].checked = true;
-    }
-  }
-}
-
 /* 로그인 */
 function chk_form() {
 	
@@ -30,11 +18,6 @@ function chk_form() {
 
 	document.getElementById("check_form").submit();
 }
-
-
-
-
-
 
 
 
