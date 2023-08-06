@@ -29,15 +29,5 @@
  		SELECT * FROM CANON_NOTICE_TBL WHERE NOTICE_NO = #{noticeNo }
  	</select>
  	
-<!--  	<resultMap type="notice.model.vo.PageNation" id="pageResultMap"> -->
-<!--  		<id 	property="nList" 	    column="CANON_NOTICE_TBL" /> -->
-<!--  		<result property="page" 		column="NOTICE_NO" /> -->
-<!--  		 <![CDATA[ -->
-<!--        		SELECT * FROM(SELECT ROW_NUMBER() OVER(ORDER BY NOTICE_NO DESC)  -->
-<!--        		ROW_NUM, CANON_NOTICE_TBL. * FROM CANON_NOTICE_TBL)  -->
-<!--        		WHERE ROW_NUM BETWEEN ? AND ? -->
-<!--      ]]>  -->
-<!--  	</resultMap> -->
- 	
  	
  </mapper> 

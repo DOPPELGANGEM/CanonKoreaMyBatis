@@ -8,7 +8,6 @@
 	    </h1> 
 	    <div class="header_util_wrap">
 	      <ul class="header_util_item_wrap">
-<%-- 	      	<c:out value="${contents}" /> --%>
 	        <li class="header_util_item"><a href="/member/logout.do">로그아웃</a></li>
 	        <li class="header_util_item"><a href="/member/update.do?member-id=${memberId}">마이페이지</a></li>
 	        <li class="header_util_item"><a href="/notice/insert.do">공지사항</a></li>
