@@ -40,11 +40,51 @@ public class NoticeDAO {
 		// 세번째에 rowBounds쓰려고 두번째에 null해준다. (id값, 검색어, rowBounds객체) -> 검색어가 필요하지 않아도 생략하면안되고 null로 지정해야한다.
 		List<Notice> nList = session.selectList("NoticeMapper.selectNoticeList", null, rowBounds); 
 		return nList;
+		
 	}
 
 	public Notice selectOneByNo(SqlSession session, int noticeNo) {
 		Notice notice = session.selectOne("NoticeMapper.selectOneByNo", noticeNo);
 		return notice;
+	}
+
+	public String generatePageNavi(SqlSession session, int currentPage) {
+		
+		// 전체 게시물의 갯수
+		int totalCount = getTotalCount(session);
+		int recordCountPerPage = 10;
+		int naviCountPerPage = 5;
+		int totalNaviCount;
+		if(totalCount % recordCountPerPage > 0) {
+			totalNaviCount = totalCount / recordCountPerPage + 1;
+		} else {
+			totalNaviCount = totalCount / recordCountPerPage;
+		}
+		
+		int startNavi = ((currentPage-1)/naviCountPerPage) * naviCountPerPage + 1; // (2-1)*5 + 1 ->6
+		int endNavi = startNavi + naviCountPerPage - 1;
+		if(endNavi > totalNaviCount) {
+			endNavi = totalNaviCount;
+		}
+		StringBuffer result = new StringBuffer();
+		boolean needPrev = true;
+		boolean needNext = true;
+		if(startNavi != 1) {
+			result.append("<a href='/notice/list.do?currentPage="+(startNavi-1)+"'><p><span>[이전]</span></p></a>");
+		}
+		for(int i=startNavi; i<=endNavi; i++) {
+			result.append("<a href='/notice/list.do?currentPage="+i+"'>"+i+"</a>");
+		}
+		if(endNavi != totalNaviCount) {
+			result.append("<a href='/notice/list.do?currentPage="+(endNavi + 1)+"'><p><span>[다음]</span></p></a>");
+		}
+		return result.toString();
+		
+	}
+	
+	private int getTotalCount(SqlSession session) {
+		int totalCount = session.selectOne("NoticeMapper.getTotalCount");
+		return totalCount;
 	}
 
 }

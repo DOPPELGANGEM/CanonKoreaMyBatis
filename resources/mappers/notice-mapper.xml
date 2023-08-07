@@ -29,5 +29,8 @@
  		SELECT * FROM CANON_NOTICE_TBL WHERE NOTICE_NO = #{noticeNo }
  	</select>
  	
+ 	<select id="getTotalCount" resultType="_int"><!-- 컬럼의갯수가한개이고 숫자이면 int형식으로 쓰기 가능 -->
+ 		SELECT COUNT(*) FROM CANON_NOTICE_TBL
+ 	</select>
  	
  </mapper> 

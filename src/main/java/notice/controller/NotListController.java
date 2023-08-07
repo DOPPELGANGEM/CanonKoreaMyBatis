@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import notice.model.service.NoticeService;
 import notice.model.vo.Notice;
+import notice.model.vo.PageNation;
 
 /**
  * Servlet implementation class NotListController
@@ -31,7 +32,7 @@ public class NotListController extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	/*protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// notice/list.do는 get방식으로동작
 		// SELECT * FROM CANON_NOTICE_TBL ORDER BY NOTICE_NO DESC (최신순 내림차순으로 가져오기)
 		NoticeService service = new NoticeService();
@@ -51,7 +52,34 @@ public class NotListController extends HttpServlet {
 		}
 		
 		
+	}*/
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// notice/list.do는 get방식으로동작
+		// SELECT * FROM CANON_NOTICE_TBL ORDER BY NOTICE_NO DESC (최신순 내림차순으로 가져오기)
+		NoticeService service = new NoticeService();
+		String page = request.getParameter("currentPage") != null ? request.getParameter("currentPage") : "1"; // page 1로세팅 삼항연산자
+		int currentPage = Integer.parseInt(page);
+		PageNation pageNation = service.selectNoticeList(currentPage);
+		List<Notice> nList = pageNation.getnList();
+		String pageNavi = pageNation.getPage();
+		if(!nList.isEmpty()) {
+			// 성공하면 list.jsp
+			request.setAttribute("nList", nList);
+			request.setAttribute("pageNavi", pageNavi);
+			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/notice/list.jsp"); 
+			view.forward(request, response); 
+		} else {
+			request.setAttribute("msg", "리스트 조회가 되지 않습니다.");
+			request.setAttribute("url", "/index.jsp");
+			request.getRequestDispatcher("/WEB-INF/views/common/serviceFailed.jsp").forward(request, response);
+		}
+		
+		
 	}
+	
+	
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

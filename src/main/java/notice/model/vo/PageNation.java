@@ -7,6 +7,11 @@ public class PageNation {
 	private List<Notice> nList; 
 	private String page; //페이지번호
 	
+	public PageNation(List<Notice> nList, String page) {
+		super();
+		this.nList = nList;
+		this.page = page;
+	}
 	public List<Notice> getnList() {
 		return nList;
 	}

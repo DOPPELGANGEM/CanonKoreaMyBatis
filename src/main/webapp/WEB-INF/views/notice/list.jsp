@@ -33,7 +33,7 @@
           		</tbody>
 			</table>
 			<ul class="paging_wrap">
-				${page}
+			 ${pageNavi}
 	      	</ul>
       	</div>
      </main>
