@@ -54,4 +54,5 @@ public class Notice {
 		return "캐논공지사항 [번호=" + noticeNo + ", 제목=" + noticeTitle + ", 내용=" + noticeContents + ", 등록일=" + regDate + "]";
 	}
 	
+	
 }
