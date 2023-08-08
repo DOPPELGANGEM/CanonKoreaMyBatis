@@ -132,6 +132,7 @@ public class Member {
 		this.memberYn = memberYn;
 	}
 	
+	
 	@Override
 	public String toString() {
 		return "캐논회원 [아이디=" + memberId + ", 비밀번호=" + memberPw + ", 이름=" + memberName + ", 나이="
